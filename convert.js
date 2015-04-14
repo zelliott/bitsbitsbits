@@ -18,7 +18,7 @@ var bToH = function (b) {
     var key = b.substring(i, i+4);
     h += lookup[key];
   }
-  return '0x' + h;
+  return h;
 };
 
 var bToD = function (b) {
@@ -75,12 +75,11 @@ var dToB = function (d) {
     }
     d = Math.floor(d / 2);
   }
-  console.log(d);
   return b;
 };
 
 var dToH = function (d) {
-
+  // Unimplemented because lazy
 };
 
 $(document).ready(function () {
@@ -103,7 +102,7 @@ $(document).ready(function () {
       $('#b').val(dToB(d));
       $('#h').val(bToH($('#b').val()));
     } else {
-      console.log('huh?');
+      console.log('what are you even trying to do rn');
     }
   });
 });
